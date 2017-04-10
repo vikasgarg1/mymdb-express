@@ -18,6 +18,10 @@ app.use(bodyParser.json())
 var moviesController = require('./controllers/movies_controller')
 app.use(moviesController)
 
+app.get('/', function (req, res){
+  res.send('home')
+})
+
 app.use(function (req, res) {
   res.send('error found')
 })
